@@ -1,0 +1,44 @@
+<div class="container">
+    <h2>XYZ Sign Up</h2>
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10 col-sm-12">
+            <div id="left"></div>
+            <div id="right">
+                <h5>Hey There! Sign up here...</h5>
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+                    <div class="inp"><input type="text" formControlName="name" required  placeholder="Name" class="form-control"></div>
+                    <div class="warning" *ngIf="myForm.get('name').invalid">Name is required</div>
+
+                    <div class="inp"><textarea required formControlName="address"  id="" cols="35" rows="5" placeholder="Address" class="form-control" style="width:300px;height: 80px;"></textarea></div>
+                    <div class="warning" *ngIf="myForm.get('address').invalid">Address is required</div>
+
+
+                    <div class="inp"><input type="email" required formControlName="email" placeholder="Email" class="form-control"></div>
+                    <div class="warning" *ngIf="myForm.get('email').invalid">Email is required</div>
+
+
+                    <div class="inp"><input type="password" required formControlName="password" placeholder="Password" class="form-control"></div>
+                    <div class="warning" *ngIf="myForm.get('password').invalid">Password is required</div>
+
+
+                    <div class="inp"><input type="tel" required formControlName="phone"  placeholder="Phone number" class="form-control"></div>
+                    <div class="warning" *ngIf="myForm.get('Phone').invalid">Phone number is required</div>
+
+
+                    <div class="inp"><textarea required formControlName="message"  id="" cols="35" rows="5" placeholder="message" class="form-control" style="width:300px;height: 80px;"></textarea></div>
+                    <div class="warning" *ngIf="myForm.get('message').invalid">Message is required</div>
+
+
+                  <button class="btn btn-warning">Submit</button>
+                </form>
+            </div>
+        
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+
+    <!-- <h3>Form Data</h3>
+    <h5>Name:{{this.cname}}</h5> -->
+
+</div>

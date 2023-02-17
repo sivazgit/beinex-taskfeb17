@@ -1,0 +1,63 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixins';
+@import '/src/assets/scss/base';
+
+.container{
+    .row{
+        .col-lg-10.col-sm-12{
+            margin-top: 50px;
+            display: flex;
+            background-color: skyblue;
+            width:100;
+            height:600px;
+            border: 0.5px solid black;
+            
+
+            #left{
+                width: 50%;
+                height: 600px;
+                background-image: url(/assets/images/sideimage.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity: 0.8;
+               
+            }
+
+            #right{
+                width: 50%;
+                height: 600px;
+                background-color: $color-primary;
+                color: $color-white;
+                text-align: center;
+
+                h5{
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .inp{
+                    margin-left: 80px;
+                    margin-top: 12px;
+                    border-radius:5px;
+                    .form-control{
+                        width:300px;
+                        height:30px;
+                        // margin-top: 10px;
+                    }
+                
+                }
+                button{
+                    margin-top: 20px;
+                    width: 150px;
+                }
+                .warning{
+                    color:orangered;
+                }
+            }
+
+        }
+    }
+
+    h3{
+        margin-top: 50px;
+    }
+}
