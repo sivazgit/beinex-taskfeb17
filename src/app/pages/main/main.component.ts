@@ -8,6 +8,7 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 })
 export class MainComponent {
 
+  formData:any;
   myForm:any = FormGroup;
 
   
@@ -26,18 +27,11 @@ export class MainComponent {
   }
 
   onSubmit(form:FormGroup){
-      console.log('Name', form.value.name);
-     
-      console.log('Address', form.value.address);
-      console.log('Email', form.value.email);
-      console.log('Password', form.value.password);
-      console.log('Phone', form.value.phone);
-      console.log('Message', form.value.message);
-
-
-
-      
+     this.formData = this.myForm;
+           
   }
+  
+
 
 
 }
